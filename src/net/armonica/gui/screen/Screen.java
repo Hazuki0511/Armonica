@@ -11,13 +11,13 @@ import java.util.ArrayList;
 
 public class Screen {
 
-    protected ArrayList<Button> buttons = new ArrayList<>();
+    public ArrayList<Button> buttons = new ArrayList<>();
 
     public void init() {
     }
 
     public void render() {
-        var fpsText = "FPS : " + Armonica.FPS;
+        var FPS = "FPS : " + Armonica.FPS;
         // 背景を描画
         Gui.drawImage(Textures.backgroundImg, 0, 0);
         // ボタンを描画
@@ -26,10 +26,13 @@ public class Screen {
         }
         // FPSを描画
         Gui.drawFilRect(1700.0F, 1000.0F, 210.0F, 70.0F, new Color(0, 0, 0, 60));
-        Fonts.mainFont.drawString(1700.0F + 30.0F, 1000.0F + 11.0F, fpsText, Color.white);
+        Fonts.mainFont.drawString(1700.0F + 30.0F, 1000.0F + 11.0F, FPS, Color.white);
     }
 
     public void update() {
+    }
+
+    public void actionPerformed(int buttonID) {
     }
 
 }

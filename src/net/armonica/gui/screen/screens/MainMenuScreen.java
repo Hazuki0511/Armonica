@@ -7,6 +7,12 @@ import net.armonica.texture.Textures;
 
 public class MainMenuScreen extends Screen {
 
+    private final int buttonOptionsID = 0;
+
+    private final int buttonPlayID = 1;
+
+    private final int buttonExitID = 2;
+
     @Override
     public void init() {
         super.init();
@@ -14,11 +20,25 @@ public class MainMenuScreen extends Screen {
         this.buttons.clear();
         /* ボタンを追加 */
         // オプション
-        this.buttons.add(new MainMenuButton(70, 440, Textures.buttonOptionsImg));
+        this.buttons.add(new MainMenuButton(this.buttonOptionsID, 70, 440, Textures.buttonOptionsImg));
         // プレイ
-        this.buttons.add(new MainMenuButton(710, 440, Textures.buttonPlayImg));
+        this.buttons.add(new MainMenuButton(this.buttonPlayID, 710, 440, Textures.buttonPlayImg));
         // 終了
-        this.buttons.add(new MainMenuButton(1350, 440, Textures.buttonExitImg));
+        this.buttons.add(new MainMenuButton(this.buttonExitID, 1350, 440, Textures.buttonExitImg));
+    }
+
+    @Override
+    public void actionPerformed(int buttonID) {
+        if (buttonID == this.buttonPlayID) {
+            // プレイ
+        }
+        if (buttonID == this.buttonOptionsID) {
+            // 設定
+        }
+        if (buttonID == this.buttonExitID) {
+            // 終了
+            System.exit(0);
+        }
     }
 
     @Override

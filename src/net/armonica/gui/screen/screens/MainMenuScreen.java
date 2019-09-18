@@ -1,5 +1,6 @@
 package net.armonica.gui.screen.screens;
 
+import net.armonica.Armonica;
 import net.armonica.gui.Gui;
 import net.armonica.gui.button.buttons.MainMenuButton;
 import net.armonica.gui.screen.Screen;
@@ -7,35 +8,28 @@ import net.armonica.texture.Textures;
 
 public class MainMenuScreen extends Screen {
 
-    private final int buttonOptionsID = 0;
-
-    private final int buttonPlayID = 1;
-
-    private final int buttonExitID = 2;
-
     @Override
     public void init() {
         super.init();
-        // ボタンを削除
-        this.buttons.clear();
         /* ボタンを追加 */
         // オプション
-        this.buttons.add(new MainMenuButton(this.buttonOptionsID, 70, 440, Textures.buttonOptionsImg));
+        this.buttons.add(new MainMenuButton(0, 70.0F, 440.0F, Textures.buttonOptionsImg));
         // プレイ
-        this.buttons.add(new MainMenuButton(this.buttonPlayID, 710, 440, Textures.buttonPlayImg));
+        this.buttons.add(new MainMenuButton(1, 710.0F, 440.0F, Textures.buttonPlayImg));
         // 終了
-        this.buttons.add(new MainMenuButton(this.buttonExitID, 1350, 440, Textures.buttonExitImg));
+        this.buttons.add(new MainMenuButton(2, 1350.0F, 440.0F, Textures.buttonExitImg));
     }
 
     @Override
     public void actionPerformed(int buttonID) {
-        if (buttonID == this.buttonPlayID) {
+        if (buttonID == 1) {
             // プレイ
         }
-        if (buttonID == this.buttonOptionsID) {
+        if (buttonID == 0) {
             // 設定
+            Armonica.setScreen(new OptionScreen());
         }
-        if (buttonID == this.buttonExitID) {
+        if (buttonID == 2) {
             // 終了
             System.exit(0);
         }
@@ -45,12 +39,11 @@ public class MainMenuScreen extends Screen {
     public void render() {
         super.render();
         // タイトルを描画
-        Gui.drawImage(Textures.titleImg, 485, 100);
+        Gui.drawImage(Textures.mainMenuTitleImg, 485.0F, 100.0F);
     }
 
     @Override
     public void update() {
-        super.update();
     }
 
 }

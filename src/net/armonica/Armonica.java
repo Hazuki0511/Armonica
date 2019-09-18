@@ -8,8 +8,6 @@ import org.newdawn.slick.*;
 
 public class Armonica extends BasicGame {
 
-    public static final String TITLE = "Armonica";
-
     public static final int WIDTH = 1920;
 
     public static final int HEIGHT = 1080;
@@ -22,14 +20,16 @@ public class Armonica extends BasicGame {
 
     public static int FPS;
 
-    public static Screen currentScreen = new MainMenuScreen();
+    private static Screen currentScreen = new MainMenuScreen();
 
     public Armonica() {
-        super(Armonica.TITLE);
+        super("Armonica");
     }
 
     public static void main(String[] args) throws SlickException {
         AppGameContainer agc = new AppGameContainer(new Armonica());
+        String[] icons = {"assets/icons/32x32.png", "assets/icons/64x64.png"};
+        agc.setIcons(icons);
         // ディスプレイのサイズを設定
         agc.setDisplayMode(Armonica.WIDTH, Armonica.HEIGHT, Armonica.FULL_SCREEN);
         // フレームレートを設定
@@ -42,6 +42,7 @@ public class Armonica extends BasicGame {
 
     @Override
     public void init(GameContainer gameContainer) throws SlickException {
+        // グラフィック
         Armonica.aGraphics = gameContainer.getGraphics();
         // フォントを読み込む
         Fonts.loadFonts();
@@ -87,4 +88,12 @@ public class Armonica extends BasicGame {
             }
         });
     }
+
+    public static void setScreen(Screen newScreen) {
+        // 画面を設定
+        Armonica.currentScreen = newScreen;
+        // 画面を初期化
+        Armonica.currentScreen.init();
+    }
+
 }

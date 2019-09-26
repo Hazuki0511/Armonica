@@ -13,13 +13,13 @@ public class OptionScreen extends Screen {
         super.init();
         /* ボタンを追加 */
         // ビデオ
-        this.buttons.add(new OptionButton(0, 345.0F, 290.0F, Textures.buttonVideoImg));
+        this.buttons.add(new OptionButton(0, 345.0F, 250.0F, Textures.buttonVideoImg));
         // コントロール
-        this.buttons.add(new OptionButton(1, 810.0F, 290.0F, Textures.buttonControlImg));
+        this.buttons.add(new OptionButton(1, 810.0F, 250.0F, Textures.buttonControlImg));
         // 音
-        this.buttons.add(new OptionButton(2, 1275.0F, 290.0F, Textures.buttonSoundImg));
+        this.buttons.add(new OptionButton(2, 1275.0F, 250.0F, Textures.buttonSoundImg));
         // 戻る
-        this.buttons.add(new OptionButton(3, 345.0F, 670.0F, Textures.buttonBackImg));
+        this.buttons.add(new OptionButton(3, 345.0F, 620.0F, Textures.buttonBackImg));
     }
 
     @Override
@@ -34,7 +34,7 @@ public class OptionScreen extends Screen {
     public void render() {
         super.render();
         // タイトルを描画
-        Gui.drawImage(Textures.optionsTitleImg, 760.0F, 100.0F);
+        Gui.drawImage(Textures.optionsTitleImg, 760.0F, 40.0F);
     }
 
     @Override

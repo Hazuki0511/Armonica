@@ -8,7 +8,7 @@ public class Textures {
     public static Image backgroundImg;
 
     /* メインメニュー */
-    public static Image mainMenuTitleImg;
+    public static Image mainmenuTitleImg;
 
     public static Image buttonPlayImg;
 
@@ -32,7 +32,7 @@ public class Textures {
         // 背景
         Textures.backgroundImg = new Image("assets/background.png");
         // メインメニューのタイトル
-        Textures.mainMenuTitleImg = new Image("assets/mainmenu_title.png");
+        Textures.mainmenuTitleImg = new Image("assets/mainmenu_title.png");
         // プレイ
         Textures.buttonPlayImg = new Image("assets/buttons/mainmenu/play.png");
         // 設定

@@ -14,7 +14,7 @@ public class Fonts {
 
     public static void loadFonts() throws SlickException {
         // フォントをパスから取得して生成
-        mainFont = new UnicodeFont(fontLocationPath + "Roboto-Thin.ttf", 40, false, false);
+        mainFont = new UnicodeFont(fontLocationPath + "Roboto-Light.ttf", 40, false, false);
         // エフェクトを追加
         mainFont.getEffects().add(new ColorEffect(Color.white));
         // Ascii文字を追加

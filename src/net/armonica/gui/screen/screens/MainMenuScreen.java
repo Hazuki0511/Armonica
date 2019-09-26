@@ -13,11 +13,11 @@ public class MainMenuScreen extends Screen {
         super.init();
         /* ボタンを追加 */
         // オプション
-        this.buttons.add(new MainMenuButton(0, 70.0F, 440.0F, Textures.buttonOptionsImg));
+        this.buttons.add(new MainMenuButton(0, 70.0F, 400.0F, Textures.buttonOptionsImg));
         // プレイ
-        this.buttons.add(new MainMenuButton(1, 710.0F, 440.0F, Textures.buttonPlayImg));
+        this.buttons.add(new MainMenuButton(1, 710.0F, 400.0F, Textures.buttonPlayImg));
         // 終了
-        this.buttons.add(new MainMenuButton(2, 1350.0F, 440.0F, Textures.buttonExitImg));
+        this.buttons.add(new MainMenuButton(2, 1350.0F, 400.0F, Textures.buttonExitImg));
     }
 
     @Override
@@ -39,7 +39,7 @@ public class MainMenuScreen extends Screen {
     public void render() {
         super.render();
         // タイトルを描画
-        Gui.drawImage(Textures.mainMenuTitleImg, 485.0F, 100.0F);
+        Gui.drawImage(Textures.mainmenuTitleImg, 660.0F, 100.0F);
     }
 
     @Override

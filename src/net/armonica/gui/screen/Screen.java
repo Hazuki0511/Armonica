@@ -31,9 +31,9 @@ public class Screen {
         // FPSを描画
         Gui.drawFilRect(1700.0F, 1000.0F, 210.0F, 70.0F, new Color(0, 0, 0, 60));
         // FPSテキスト
-        Fonts.mainFont.drawString(1700.0F + 30.0F, 1000.0F + 11.0F, FPS, Color.white);
+        Fonts.mainFont.drawString(1700.0F + 33.0F, 1000.0F + 11.0F, FPS, Color.white);
         // FPSテキストの影
-        Fonts.mainFont.drawString(1700.0F + 30.0F + 1.0F, 1000.0F + 11.0F + 1.0F, FPS, new Color(0, 0, 0, 60));
+        Fonts.mainFont.drawString(1700.0F + 33.0F + 1.0F, 1000.0F + 11.0F + 1.0F, FPS, new Color(0, 0, 0, 60));
     }
 
     public void update() {
